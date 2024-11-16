@@ -1,0 +1,1 @@
+- `scripts/<name>.ts` have `-` for spaces in names

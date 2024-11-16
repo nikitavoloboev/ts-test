@@ -9,7 +9,7 @@ import * as os from "os"
 // returns path of file on success
 export async function writeContentToSrcData(
   data: Array<any>,
-  fileName: string,
+  fileName: string
 ): Promise<string | void> {
   const srcDataDir = path.join(os.homedir(), "src", "data")
 
@@ -26,7 +26,7 @@ export async function writeContentToSrcData(
 
 export async function writeContentToDesktopFile(
   data: string | Buffer,
-  fileName: string,
+  fileName: string
 ): Promise<string | void> {
   const desktopDir = path.join(os.homedir(), "Desktop")
   const filePath = path.join(desktopDir, fileName)
@@ -44,7 +44,7 @@ export async function writeContentToDesktopFile(
 // returns path of file on success
 export async function writeJsonContentToDesktopFile(
   data: Array<any>,
-  fileName: string,
+  fileName: string
 ): Promise<string | void> {
   const desktopDir = path.join(os.homedir(), "Desktop")
   const filePath = path.join(desktopDir, fileName)
@@ -67,7 +67,7 @@ export async function readFileContent(filePath: string) {
 // currentFilePath has to be import.meta.url
 export async function readFileContentRelativeToCurrentFolder(
   currentFilePath: string,
-  relativePath: string,
+  relativePath: string
 ) {
   // Calculate the directory of the currentPath
   const directoryPath = path.dirname(currentFilePath)
@@ -81,7 +81,7 @@ export async function readFileContentRelativeToCurrentFolder(
 
 export function getFilePathOfFileFromProvidedAbsolutePathFromExecutedBunFile(
   filePathOfBunFile: string,
-  absolutePath: string,
+  absolutePath: string
 ) {
   const directoryPath = path.dirname(filePathOfBunFile)
   const filePath = path.join(directoryPath, absolutePath)
@@ -99,11 +99,11 @@ export async function zipFile(filePath: string) {
 export async function updateConfigFile(
   absolutePathToConfigFileFromHomeConfigFolder: string,
   key: string,
-  value: string,
+  value: string
 ) {
   const configFilePath = path.join(
     os.homedir(),
-    `.config/${absolutePathToConfigFileFromHomeConfigFolder}`,
+    `.config/${absolutePathToConfigFileFromHomeConfigFolder}`
   )
 
   try {
@@ -139,11 +139,11 @@ export async function updateConfigFile(
 }
 
 export async function readConfigFileContent(
-  absolutePathToConfigFileFromHomeConfigFolder: string,
+  absolutePathToConfigFileFromHomeConfigFolder: string
 ) {
   const configFilePath = path.join(
     os.homedir(),
-    `.config/${absolutePathToConfigFileFromHomeConfigFolder}`,
+    `.config/${absolutePathToConfigFileFromHomeConfigFolder}`
   )
   const file = Bun.file(configFilePath)
   return await file.text()
@@ -165,11 +165,11 @@ export async function readConfigFileContent(
 
 export async function readConfigFileValue(
   absolutePathToConfigFileFromHomeConfigFolder: string,
-  key: string,
+  key: string
 ) {
   const configFilePath = path.join(
     os.homedir(),
-    `.config/${absolutePathToConfigFileFromHomeConfigFolder}`,
+    `.config/${absolutePathToConfigFileFromHomeConfigFolder}`
   )
 
   const file = Bun.file(configFilePath)
@@ -245,7 +245,7 @@ export async function writeJsonToFile(filePath: string, data: object) {
 // overwrite content of the file at filePath with an array of objects
 export async function writeJsonArrayToFile(
   filePath: string,
-  data: Array<object>,
+  data: Array<object>
 ) {
   // replace '~' with user's home directory
   const resolvedFilePath = filePath.startsWith("~")
@@ -263,7 +263,7 @@ export async function writeJsonArrayToFile(
 // Function to append a new object to an existing JSON array file or create a new file with the object as the first entry in an array
 export async function appendObjectToJsonArrayFile(
   filePath: string,
-  newData: object,
+  newData: object
 ): Promise<void> {
   // Use the existing utility to resolve the file path, considering '~' as the home directory
   const resolvedFilePath = filePath.startsWith("~")
@@ -300,7 +300,7 @@ export async function readJsonFromFile(filePath: string) {
 
 export async function checkIfFieldExistsInJsonFile(
   filePath: string,
-  fieldName: string,
+  fieldName: string
 ) {
   const resolvedFilePath = filePath.startsWith("~")
     ? path.join(os.homedir(), filePath.slice(1))

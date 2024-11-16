@@ -1,0 +1,28 @@
+# core
+.DS_Store
+node_modules
+.env
+.env*.local
+
+# other
+*.db
+private/*
+lib/git
+archive.ts
+output.md
+redis/*
+wiki/*
+seed
+lib/git
+lib/other
+deno
+docs/private-todo.md
+dist
+wip.json
+wip.md
+*.gz
+lib/ts-utils
+.flox
+past-*
+
+private.*

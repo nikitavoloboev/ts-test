@@ -1,0 +1,5 @@
+- will be bound to `:`
+- `:` alone will fzf search through package.json scripts to run
+- `: <cmd>` does bun command
+- check if ## Commands exists in readme, if yes take the description too so it shows command plus what command does
+- use CLI libs I saved in Telegram saved messsages

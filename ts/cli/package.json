@@ -1,0 +1,13 @@
+{
+  "name": "bun-scripts",
+  "scripts": {
+    "dev": "bun --watch cli.ts"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "bun-types": "canary"
+  },
+  "prettier": {
+    "semi": false
+  }
+}
