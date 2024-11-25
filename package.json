@@ -36,6 +36,7 @@
     "magic-regexp": "^0.8.0",
     "markdown-link-extractor": "^4.0.2",
     "micromark": "^4.0.1",
+    "neverthrow": "^8.1.1",
     "ollama": "^0.5.10",
     "open": "^10.1.0",
     "openai": "^4.73.0",
