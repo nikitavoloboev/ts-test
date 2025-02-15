@@ -1,7 +1,7 @@
 {
-  "name": "ts",
+  "name": "ts-test",
   "scripts": {
-    "ts": "bun --watch scripts/run.ts",
+    "s": "bun --watch scripts/run.ts",
     "watch": "bun cmd.ts run",
     "dev": "bun --watch run.ts",
     "try": "bun --watch try/try.ts",

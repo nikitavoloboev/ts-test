@@ -1,5 +1,3 @@
-# TS Test
-
 ## Setup
 
 ```
@@ -8,4 +6,4 @@ bun i
 
 ## Run
 
-Run scripts or other things with `bun --watch <path>`
+Can run scripts with `bun --watch scripts/<script-name>`.
