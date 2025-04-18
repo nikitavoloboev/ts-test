@@ -1,9 +1,9 @@
 ## Setup
 
 ```
-bun i
+pnpm i
 ```
 
 ## Run
 
-Can run scripts with `bun --watch scripts/<script-name>`.
+I try stuff out in [try](try).
