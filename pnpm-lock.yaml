@@ -35,6 +35,9 @@ importers:
       arktype:
         specifier: ^2.1.20
         version: 2.1.20
+      cac:
+        specifier: ^6.7.14
+        version: 6.7.14
       chatgpt:
         specifier: ^5.2.5
         version: 5.2.5
@@ -1444,7 +1447,6 @@ packages:
 
   libsql@0.5.6:
     resolution: {integrity: sha512-k0qHpyU47iWBplT4IJKEcMgUbms8jl9cNGE6aqsdOYmSJjtZIaYkn8f4ku5DzxRHpk1+o4FK7ZwGVCExYboZqQ==}
-    cpu: [x64, arm64, wasm32]
     os: [darwin, linux, win32]
 
   lie@3.3.0:
